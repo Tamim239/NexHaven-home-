@@ -11,20 +11,17 @@ export const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink to="/" className={({isActive}) => isActive ? "font-bold underline" : ""}>Home</NavLink>
       </li>
       <li>
-        <NavLink to="/update-profile">Update Profile</NavLink>
+        <NavLink to="/update-profile" className={({isActive}) => isActive ? "font-bold underline" : ""}>Update Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/user-profile">User Profile</NavLink>
+        <NavLink to="/user-profile" className={({isActive}) => isActive ? "font-bold underline" : ""}>User Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink to="/login" className={({isActive}) => isActive ? "font-bold underline" : ""}>Login</NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/register">Register</NavLink>
-      </li> */}
     </>
   );
 

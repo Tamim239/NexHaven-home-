@@ -1,11 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
+import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from 'react-hot-toast';
 
 export const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [handleError, setHandleError] = useState("");
+  const {createUser} = useContext(AuthContext)
+
 
   const {
     register,
@@ -17,9 +21,29 @@ export const Register = () => {
   const onSubmit = (data) => {
     const { name, email, password, photoURL } = data;
     console.log(name, email, password, photoURL);
+    setHandleError('')
+    console.log(password.length)
+    if (password.length < 6) {
+      return setHandleError("Ensure length must be at least 6 character");
+    }
     if (!/[A-Z]/.test(password)) {
       return setHandleError("Ensure at least one uppercase letter exists");
     }
+    if (!/[a-z]/.test(password)) {
+      return setHandleError("Ensure at least one lowercase letter exists");
+    }
+
+createUser(email, password)
+.then(res =>{
+    console.log("successfully", res)
+    toast.success('successfully registered')
+
+})
+.catch(() =>{
+    // console.log(err.message)
+   toast.error("email and password already used")
+} )
+
   };
 
   return (
@@ -36,7 +60,7 @@ export const Register = () => {
             type="text"
             name="name"
             id="name"
-            {...register("name", { required: true })}
+            {...register("name", { required: true } )}
             placeholder="Your name"
             className="w-full px-4 py-3 text-black rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"
           />
@@ -99,6 +123,12 @@ export const Register = () => {
               This password field is required
             </span>
           )}
+          {
+           handleError && (
+            <span className="text-red-600">
+              {handleError}
+            </span>
+          )} 
         </div>
         <button
           type="submit"
@@ -107,6 +137,7 @@ export const Register = () => {
         >
           Register
         </button>
+        <Toaster />
       </form>
       <p className="text-xs text-center sm:px-6 dark:text-gray-600">
         Already have an account?
