@@ -1,0 +1,71 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Cozy Single-Family Home",
+      "segment_name": "Single-family homes",
+      "description": "A charming single-family home perfect for a small family. Features include spacious living areas, a modern kitchen, and a backyard patio.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "123 Main Street, Anytown, USA",
+      "facilities": ["living room", "kitchen", "backyard"]
+    },
+    {
+      "id": 2,
+      "estate_title": "Luxury Townhouse with City Views",
+      "segment_name": "Townhouses",
+      "description": "Stunning townhouse with panoramic city views. Offers multiple levels of living space, a rooftop terrace, and high-end finishes throughout.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2500 sq ft",
+      "location": "456 Elm Avenue, Metropolis, USA",
+      "facilities": ["living room", "kitchen", "rooftop terrace"]
+    },
+    {
+      "id": 3,
+      "estate_title": "Modern Apartment in Downtown",
+      "segment_name": "Apartments",
+      "description": "Sleek and stylish apartment in the heart of downtown. Features include open-concept living, floor-to-ceiling windows, and access to building amenities.",
+      "price": "$2,000/month",
+      "status": "rent",
+      "area": "1000 sq ft",
+      "location": "789 Oak Street, Urbanville, USA",
+      "facilities": ["living room", "gym", "swimming pool"]
+    },
+    {
+      "id": 4,
+      "estate_title": "Student Housing Near Campus",
+      "segment_name": "Student housing",
+      "description": "Convenient student housing just steps away from campus. Furnished units with shared common areas, study rooms, and on-site laundry facilities.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "600 sq ft",
+      "location": "101 College Avenue, University Town, USA",
+      "facilities": ["shared living room", "study room", "laundry room"]
+    },
+    {
+      "id": 5,
+      "estate_title": "Senior Living Community with Amenities",
+      "segment_name": "Senior living communities",
+      "description": "Active senior living community offering various amenities and activities. Enjoy maintenance-free living, social events, and wellness programs.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1200 sq ft",
+      "location": "321 Maple Lane, Serenity Gardens, USA",
+      "facilities": ["community center", "fitness center", "gardens"]
+    },
+    {
+      "id": 6,
+      "estate_title": "Seaside Vacation Rental Paradise",
+      "segment_name": "Vacation rentals",
+      "description": "Escape to this beachfront vacation rental with stunning ocean views. Features include multiple bedrooms, a private pool, and direct beach access.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "2200 sq ft",
+      "location": "Oceanfront Drive, Paradise Cove, USA",
+      "facilities": ["oceanfront view", "private pool", "beach access"]
+    }
+  ]
+
+
+    

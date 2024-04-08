@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { FaGithub, FaGoogle } from "react-icons/fa";
@@ -8,6 +8,10 @@ import { FaGithub, FaGoogle } from "react-icons/fa";
 export const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
+
+  const location = useLocation()
+  const navigate = useNavigate()
+
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,6 +22,7 @@ export const Login = () => {
     loginUser(email, password)
       .then((res) => {
         console.log(res);
+        navigate(location?.state ? location.state :'/')
       })
       .catch(() =>{
         toast.error("email and password combination is incorrect")
