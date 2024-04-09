@@ -3,11 +3,12 @@ import { useContext, useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoMdClose } from "react-icons/io";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 export const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
-  console.log(user);
-
+ 
   const [isOpen, setOpen] = useState(false);
 
   const navLinks = (
@@ -47,7 +48,7 @@ export const Navbar = () => {
     <nav className="md:w-4/5 mx-auto items-center my-5">
       <div className="flex justify-between">
         <div className="flex gap-4 flex-row-reverse items-center">
-          <h1 className="text-2xl font-bold">NexHaven</h1>
+          <h1 className="text-2xl font-bold">Nex<span className="bg-gradient-to-r from-[#ffd519] to-[#a09e9c] bg-clip-text text-transparent">Haven</span></h1>
           <div className="md:hidden text-3xl" onClick={() => setOpen(!isOpen)}>
             {isOpen === true ? <IoMdClose /> : <FiMenu />}
           </div>
@@ -60,19 +61,28 @@ export const Navbar = () => {
         >
           {navLinks}
         </ul>
-        <div className="w-10 h-10 flex gap-5 items-center">
+        <div className="my-anchor-element w-10 h-10 flex gap-5 items-center">
           <img
-            src='https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg'
+            src={
+              user
+                ? user.photoURL ||
+                  "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                : ""
+            }
             alt="profile image"
             className="rounded-full"
           />
+          <Tooltip anchorSelect=".my-anchor-element" place="left">
+            {user?.displayName || "undefined"}
+          </Tooltip>
           {user ? (
-             <button 
-             onClick={()=> logOut()}
-             className="btn bg-gray-500 text-white">
-             Sign Out
-             {/* <NavLink to="/login" className={({isActive}) => isActive ? "font-bold underline" : ""}>Login</NavLink> */}
-           </button>
+            <button
+              onClick={() => logOut()}
+              className="btn bg-gray-500 text-white"
+            >
+              Sign Out
+              {/* <NavLink to="/login" className={({isActive}) => isActive ? "font-bold underline" : ""}>Login</NavLink> */}
+            </button>
           ) : (
             <button className="btn bg-gray-500 text-white">
               <Link to="login">Login</Link>
