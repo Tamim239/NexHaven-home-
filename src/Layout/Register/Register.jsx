@@ -8,7 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 export const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [handleError, setHandleError] = useState("");
-  const {createUser} = useContext(AuthContext)
+  const {createUser, updateUser, logOut} = useContext(AuthContext)
 
 
   const {
@@ -33,10 +33,15 @@ export const Register = () => {
       return setHandleError("Ensure at least one lowercase letter exists");
     }
 
+
 createUser(email, password)
 .then(res =>{
+   logOut()
     console.log("successfully", res)
-    toast.success('successfully registered')
+     updateUser(name, photoURL)
+     .then(()=>{
+       toast.success('successfully registered')
+     })
 
 })
 .catch(() =>{
@@ -75,7 +80,7 @@ createUser(email, password)
           <input
             type="text"
             name="photoURL"
-            {...register("photoURL")}
+            {...register("photoURL", { required: true })}
             id="photoURL"
             placeholder="photoURL here"
             className="w-full px-4 py-3 text-black rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800 focus:dark:border-violet-600"

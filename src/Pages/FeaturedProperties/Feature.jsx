@@ -28,17 +28,21 @@ export const Feature = ({ feature }) => {
           />
           <div className="flex items-center text-xs absolute top-0 left-3">
             <span className="text-xl bg-[#ffd519] p-2 rounded-xl font-bold">
-              For {status}
+              {status}
             </span>
           </div>
-          <div className="flex items-center text-xs absolute bottom-0 right-0">
-            <span className="text-xl bg-[#ffd519] p-2 rounded-xl font-bold">
-              For {price}
+        </div>
+        <div className="flex items-center justify-between">
+        <p className=" py-2 px-2 rounded-xl text-center  text-2xl font-semibold">
+          {segment_name}
+        </p>
+        <div className="flex items-center text-xs ">
+            <span className="text-base bg-[#ffd519] p-2 rounded-xl font-bold">
+              {price}
             </span>
           </div>
         </div>
         <div className="*:flex *:items-center *:gap-2 *:text-xl flex items-center justify-between px-3">
-        
 
           <div>
             <FaBed className="text-[#f85830]" />
@@ -60,23 +64,10 @@ export const Feature = ({ feature }) => {
               <CiLocationOn /> {location}
             </p>
           </div>
-          <div className="flex gap-2 items-center justify-around">
-            {facilities.map((facility, index) => (
-              <div
-                key={index}
-                className=" py-2 px-2 rounded-xl bg-[#343131] text-white"
-              >
-                <p>{facility}</p>
-              </div>
-            ))}
-          </div>
         </div>
         <hr />
       </div>
       <div className="text-right mt-2">
-        <p className=" py-2 px-2 rounded-xl bg-[#343131] text-white text-center">
-          {segment_name}
-        </p>
         <Link to={`/feature/${id}`}>
           <button className="btn bg-gradient-to-r from-[#f79b11] to-[#454242] text-white flex-grow">
             View Property

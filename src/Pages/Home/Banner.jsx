@@ -31,7 +31,7 @@ export const Banner = () => {
       navigation={true}
       modules={[Autoplay, Pagination, Navigation]}
       onAutoplayTimeLeft={onAutoplayTimeLeft}
-      className="mySwiper md:h-[500px]"
+      className="mySwiper h-[500px]"
     >
       <SwiperSlide>
         <div
@@ -40,16 +40,15 @@ export const Banner = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="w-full h-full relative"
+          className="w-full h-full relative rounded-3xl"
         >
-          <div className="absolute top-32 left-10  space-y-3">
-            <h1 className="text-6xl text-[#FFEC51] text-center font-bold">
+          <div className="absolute md:top-32 top-16  max-sm:p-3 md:left-10  space-y-3">
+            <h1 className="text-4xl md:text-6xl text-[#FFEC51] text-center font-bold">
               Welcome Home <br /> to Nex<span className="bg-gradient-to-r from-[#f79b11] to-[#454242] bg-clip-text text-transparent">Haven</span>
             </h1>
-            <p className="w-1/2 mx-auto text-white">
+            <p className="md:w-1/2 md:mx-auto max-sm:px-5 text-white max-sm:text-center">
               Discover the epitome of modern living at NexHaven. Immerse
-              yourself in a vibrant community where comfort meets
-              convenience.Explore our range of luxurious amenities, spacious
+              yourself in a vibrant community where comfort meets convenience.Explore our range of luxurious amenities, spacious
               floor plans, and unparalleled service. Welcome home to a lifestyle
               redefined.
             </p>
@@ -66,13 +65,13 @@ export const Banner = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="w-full h-full relative"
+          className="w-full h-full relative rounded-3xl"
         >
-          <div className="absolute top-32 left-10  space-y-3">
-            <h1 className="text-6xl text-[#FFEC51] text-center font-bold">
+          <div className="absolute md:top-32 top-16  max-sm:p-3 md:left-10  space-y-3">
+            <h1 className="text-4xl md:text-6xl text-[#FFEC51] text-center font-bold">
               Welcome Home <br /> to Nex<span className="bg-gradient-to-r from-[#f79b11] to-[#454242] bg-clip-text text-transparent">Haven</span>
             </h1>
-            <p className="w-1/2 mx-auto text-white">
+            <p className="md:w-1/2 md:mx-auto max-sm:px-5 text-white max-sm:text-center">
               Discover the epitome of modern living at NexHaven. Immerse
               yourself in a vibrant community where comfort meets
               convenience.Explore our range of luxurious amenities, spacious
@@ -92,13 +91,13 @@ export const Banner = () => {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          className="w-full h-full relative"
+          className="w-full h-full relative rounded-3xl"
         >
-          <div className="absolute top-32 left-10  space-y-3">
-            <h1 className="text-6xl text-[#FFEC51] text-center font-bold">
+          <div className="absolute md:top-32 top-16  max-sm:p-3 md:left-10  space-y-3">
+            <h1 className=" text-4xl md:text-6xl text-[#FFEC51] text-center font-bold">
               Welcome Home <br /> to Nex<span className="bg-gradient-to-r from-[#f79b11] to-[#454242] bg-clip-text text-transparent">Haven</span>
             </h1>
-            <p className="w-1/2 mx-auto text-white">
+            <p className="md:w-1/2 md:mx-auto max-sm:px-5 text-white max-sm:text-center">
               Discover the epitome of modern living at NexHaven. Immerse
               yourself in a vibrant community where comfort meets
               convenience.Explore our range of luxurious amenities, spacious
@@ -116,15 +115,15 @@ export const Banner = () => {
           style={{
             backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(${image4})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "center ",
           }}
-          className="w-full h-full relative"
+          className="w-full h-full relative rounded-3xl" 
         >
-          <div className="absolute top-32 left-10  space-y-3">
-            <h1 className="text-6xl text-[#FFEC51] text-center font-bold">
+          <div className="absolute md:top-32 top-16  max-sm:p-3 md:left-10  space-y-3">
+            <h1 className=" text-4xl md:text-6xl text-[#FFEC51] text-center font-bold">
               Welcome Home <br /> to Nex<span className="bg-gradient-to-r from-[#f79b11] to-[#454242] bg-clip-text text-transparent">Haven</span>
             </h1>
-            <p className="w-1/2 mx-auto text-white">
+            <p className="md:w-1/2 md:mx-auto max-sm:px-5 text-white max-sm:text-center">
               Discover the epitome of modern living at NexHaven. Immerse
               yourself in a vibrant community where comfort meets
               convenience.Explore our range of luxurious amenities, spacious
@@ -137,9 +136,8 @@ export const Banner = () => {
           </div>
         </div>
       </SwiperSlide>
-      <div className="autoplay-progress absolute top-1/2 bg-red-500" slot="">
-        <svg viewBox="0 0 48 48" ref={progressCircle}>
-          <circle cx="24" cy="24" r="20"></circle>
+      <div className="autoplay-progress absolute bottom-10 md:bottom-16 text-xl right-10 md:right-20 text-white z-40 rounded-full p-1" slot="">
+        <svg viewBox="0 0 48 48" ref={progressCircle}>  
         </svg>
         <span ref={progressContent}></span>
       </div>

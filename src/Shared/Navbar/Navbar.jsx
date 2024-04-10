@@ -10,8 +10,6 @@ export const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
  
   const [isOpen, setOpen] = useState(false);
-  // const {displayName, photoURL} = user
-console.log(user.photoURL, user)
   const navLinks = (
     <>
       <li>
@@ -42,6 +40,18 @@ console.log(user.photoURL, user)
           </NavLink>
         </li>
       )}
+      {user && (
+        <li>
+        <NavLink
+          to="/reviews"
+          className={({ isActive }) =>
+            isActive ? "font-bold underline" : ""
+          }
+        >
+          Reviews
+        </NavLink>
+      </li>
+      )} 
     </>
   );
 
@@ -67,18 +77,15 @@ console.log(user.photoURL, user)
           
           {user ? (
            <div className="flex gap-5 items-center">
-             <div className="my-anchor-element w-10 rounded-full">
+             <div className="my-anchor-element">
              <img
-               src={user?.photoURL}
+               src=
+               {user.photoURL || ""}
                alt="profile image"
-               className="rounded-full"
+               className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500"
              />
              <Tooltip anchorSelect=".my-anchor-element" place="left">
              {user?.displayName || "your Name"}
-          {/* {
-            user && 
-            <p></p>
-          } */}
           </Tooltip>
              </div>
              <button

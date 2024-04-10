@@ -8,6 +8,8 @@ import { UpdateProfile } from "../Pages/Profile/UpdateProfile";
 import { FeaturedProperties } from "../Pages/FeaturedProperties/FeaturedProperties";
 import { FeaturedDetails } from "../Pages/FeaturedDetails";
 import { ErrorPage } from "../Shared/ErrorPage/ErrorPage";
+import { Reviews } from "../Pages/Reviews/Reviews";
+import { UserProfile } from "../Pages/Profile/UserProfile";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +41,14 @@ export const router = createBrowserRouter([
         {
             path: "/update-profile",
             element: <PrivateProvider><UpdateProfile></UpdateProfile></PrivateProvider>
+        },
+        {
+            path: "/user-profile",
+            element: <PrivateProvider><UserProfile></UserProfile></PrivateProvider>
+        },
+        {
+          path: "/reviews",
+          element: <PrivateProvider><Reviews></Reviews></PrivateProvider>
         }
         
       ]
