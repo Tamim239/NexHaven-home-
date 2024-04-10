@@ -10,6 +10,8 @@ import { FeaturedDetails } from "../Pages/FeaturedDetails";
 import { ErrorPage } from "../Shared/ErrorPage/ErrorPage";
 import { Reviews } from "../Pages/Reviews/Reviews";
 import { UserProfile } from "../Pages/Profile/UserProfile";
+import { Contact } from "../Pages/Contact/Contact";
+import { About } from "../Pages/About/About";
 
 export const router = createBrowserRouter([
     {
@@ -49,6 +51,14 @@ export const router = createBrowserRouter([
         {
           path: "/reviews",
           element: <PrivateProvider><Reviews></Reviews></PrivateProvider>
+        },
+        {
+          path: "/about",
+          element: <About></About>
+        },
+        {
+          path: "/contact",
+          element: <Contact></Contact>
         }
         
       ]

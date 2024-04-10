@@ -9,11 +9,11 @@ export const PrivateProvider = ({children}) => {
     const location = useLocation()
 
 if(loading){
-    return  <div className="flex justify-center h-96 items-center">(<InfinitySpin
+    return  <div className="flex justify-center h-96 items-center"><InfinitySpin
         visible={true}
         width="200"
         color="#4fa94d"
-        />)</div>
+        /></div>
 }
 
 if(user){

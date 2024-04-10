@@ -51,7 +51,23 @@ export const Navbar = () => {
           Reviews
         </NavLink>
       </li>
-      )} 
+      )}
+       <li>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "font-bold underline" : "")}
+        >
+          About
+        </NavLink>
+      </li> 
+      <li>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "font-bold underline" : "")}
+        >
+          Contact Us
+        </NavLink>
+      </li> 
     </>
   );
 
@@ -67,7 +83,7 @@ export const Navbar = () => {
         <ul
           className={`md:flex *:ml-4 text-lg items-center absolute md:static
             ${
-              isOpen ? "top-10 w-full" : "hidden"
+              isOpen ? "top-16 w-full z-50" : "hidden"
             } max-sm:bg-slate-800 max-sm:text-white`}
         >
           {navLinks}
