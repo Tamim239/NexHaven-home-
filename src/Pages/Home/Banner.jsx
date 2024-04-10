@@ -8,6 +8,9 @@ import { useRef } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Link } from "react-router-dom";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export const Banner = () => {
   const progressCircle = useRef(null);
@@ -16,9 +19,10 @@ export const Banner = () => {
     progressCircle.current.style.setProperty("--progress", 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
-
+  AOS.init()
   return (
     <Swiper
+    data-aos="zoom-in" data-aos-duration="1000"
       spaceBetween={30}
       centeredSlides={true}
       autoplay={{
@@ -53,7 +57,15 @@ export const Banner = () => {
               redefined.
             </p>
             <div className="flex justify-center">
-            <button className="btn btn-secondary">Get Started</button>
+            <Link to="/login"
+              href="#_"
+              className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+            >
+              <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+              <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                <span className="relative text-white">Button Text</span>
+              </span>
+            </Link>
             </div>
           </div>
         </div>
@@ -79,7 +91,15 @@ export const Banner = () => {
               redefined.
             </p>
             <div className="flex justify-center">
-            <button className="btn btn-secondary">Get Started</button>
+            <Link to="/login"
+              href="#_"
+              className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+            >
+              <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+              <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                <span className="relative text-white">Button Text</span>
+              </span>
+            </Link>
             </div>
           </div>
         </div>
@@ -105,7 +125,15 @@ export const Banner = () => {
               redefined.
             </p>
             <div className="flex justify-center">
-            <button className="btn btn-secondary">Get Started</button>
+            <Link to="/login"
+              href="#_"
+              className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+            >
+              <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+              <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                <span className="relative text-white">Button Text</span>
+              </span>
+            </Link>
             </div>
           </div>
         </div>
@@ -131,7 +159,15 @@ export const Banner = () => {
               redefined.
             </p>
             <div className="flex justify-center">
-            <button className="btn btn-secondary">Get Started</button>
+            <Link to="/login"
+              href="#_"
+              className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+            >
+              <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
+              <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
+                <span className="relative text-white">Button Text</span>
+              </span>
+            </Link>
             </div>
           </div>
         </div>

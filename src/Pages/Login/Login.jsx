@@ -4,8 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import { FaGithub, FaGoogle } from "react-icons/fa";
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export const Login = () => {
+  AOS.init()
   const [showPassword, setShowPassword] = useState(false);
   const { loginUser, googleLogin, githubLogin } = useContext(AuthContext);
 
@@ -33,6 +36,7 @@ export const Login = () => {
    googleLogin()
    .then((res) =>{
     console.log(res)
+    navigate(location?.state ? location.state :'/')
    })
    .catch(() =>{
     toast.error("email and password combination is incorrect")
@@ -42,6 +46,7 @@ export const Login = () => {
    githubLogin()
    .then((res) =>{
     console.log(res)
+    navigate(location?.state ? location.state :'/')
    })
    .catch(() => toast.error("email and password combination is incorrect"))
   }
@@ -51,7 +56,7 @@ export const Login = () => {
 
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+    <div data-aos="fade-down-right" data-aos-duration="1000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <h1 className="text-2xl font-bold text-center">Login Here</h1>
       <form onSubmit={handleLogin} className="space-y-6">
         <div className="space-y-1 text-sm">

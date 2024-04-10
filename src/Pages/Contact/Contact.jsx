@@ -1,9 +1,12 @@
 
 import computer from '../../assets/computer.svg'
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export const Contact = () => {
+	AOS.init()
   return (
-    <div className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-[#1F2937] text-white dark:bg-gray-100 dark:text-gray-800">
+    <div data-aos="zoom-out-down" data-aos-duration="1000" className="grid max-w-screen-xl grid-cols-1 gap-8 px-8 py-16 mx-auto rounded-lg md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 bg-[#1F2937] text-white dark:bg-gray-100 dark:text-gray-800">
 	<div className="flex flex-col justify-between">
 		<div className="space-y-2">
 			<h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>

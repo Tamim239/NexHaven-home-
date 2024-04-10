@@ -1,7 +1,10 @@
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export const About = () => {
+	AOS.init()
   return (
-    <section className="py-6 bg-[#1F2937]  ">
+    <section data-aos="flip-left" data-aos-duration="1000" className="py-6 bg-[#1F2937]  ">
 	<div className="container flex flex-col items-center justify-center p-4 mx-auto sm:p-10">
 		<p className="p-2 text-sm font-medium tracking-wider text-center uppercase text-white">Development team</p>
 		<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl text-white">The talented people behind the scenes</h1>

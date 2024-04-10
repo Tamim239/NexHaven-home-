@@ -4,6 +4,8 @@ import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 export const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -50,9 +52,9 @@ createUser(email, password)
 } )
 
   };
-
+  AOS.init()
   return (
-    <div className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+    <div data-aos="fade-down-right" data-aos-duration="2000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <h1 className="text-2xl font-bold text-center">
         Create New Account Here
       </h1>
