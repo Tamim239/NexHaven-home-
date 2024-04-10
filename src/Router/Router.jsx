@@ -5,6 +5,8 @@ import { Login } from "../Pages/Login/Login";
 import { Register } from "../Layout/Register/Register";
 import { PrivateProvider } from "./PrivateProvider";
 import { UpdateProfile } from "../Pages/Profile/UpdateProfile";
+import { FeaturedProperties } from "../Pages/FeaturedProperties/FeaturedProperties";
+import { FeaturedDetails } from "../Pages/FeaturedDetails";
 
 export const router = createBrowserRouter([
     {
@@ -24,9 +26,19 @@ export const router = createBrowserRouter([
             element: <Register></Register>
         },
         {
+          path: "/featuredProduct",
+          element: <FeaturedProperties></FeaturedProperties>,
+        },
+        {
+          path: "/feature/:id",
+          element: <FeaturedDetails></FeaturedDetails>,
+          loader: ()=> fetch('/real.json')
+        },
+        {
             path: "/update-profile",
             element: <PrivateProvider><UpdateProfile></UpdateProfile></PrivateProvider>
-        },
+        }
+        
       ]
     },
   ]);

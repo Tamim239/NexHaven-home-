@@ -1,0 +1,87 @@
+[
+  {
+      "id": 1,
+      "estate_title": "Cozy Single-Family Home",
+      "image": "https://i.ibb.co/tmDrf1w/image6.jpg",
+      "segment_name": "Single-family homes",
+      "description": "This charming single-family home is perfect for a small family seeking comfort and convenience. With its spacious 1800 square feet of living space, this home offers ample room for relaxation and entertainment. The modern kitchen is equipped with state-of-the-art appliances, making cooking a delight. Step outside to the backyard patio, ideal for hosting gatherings or simply enjoying the outdoors. Featuring three bedrooms and two bathrooms, including a master suite, this home provides comfortable living for the whole family.",
+      "price": "$300,000",
+      "status": "sale",
+      "area": "1800 sqft",
+      "location": "123 Main Street, Anytown, USA",
+      "facilities": ["living room", "kitchen", "backyard"],
+      "bedrooms": 3,
+      "bathrooms": 2
+  },
+  {
+      "id": 2,
+      "estate_title": "Luxury Townhouse with City Views",
+      "image": "https://i.ibb.co/YNf8k9y/pexels-pixabay-271618.jpg",
+      "segment_name": "Townhouses",
+      "description": "Indulge in luxury living with this stunning townhouse offering panoramic city views. Spread across 2500 square feet, this residence boasts multiple levels of living space, providing privacy and versatility. The rooftop terrace offers a perfect spot for relaxation or entertaining guests while enjoying breathtaking views of the city skyline. Every detail of this townhouse exudes elegance, from the high-end finishes to the modern kitchen with premium appliances. With four bedrooms and three bathrooms, including a lavish master suite, this townhouse epitomizes sophisticated urban living.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "2500 sqft",
+      "location": "456 Elm Avenue, Metropolis, USA",
+      "facilities": ["living room", "kitchen", "rooftop terrace"],
+      "bedrooms": 4,
+      "bathrooms": 3
+  },
+  {
+      "id": 3,
+      "estate_title": "Modern Apartment in Downtown",
+      "image": "https://i.ibb.co/sRQ1V1p/pexels-jean-van-der-meulen-2416932.jpg",
+      "segment_name": "Apartments",
+      "description": "Experience sleek and stylish urban living in this modern apartment located in the heart of downtown. Boasting 1000 square feet of open-concept living space, this apartment features floor-to-ceiling windows that flood the space with natural light. Residents have access to building amenities including a fully equipped gym and a refreshing swimming pool, perfect for staying active and relaxed. With two bedrooms and one bathroom, this apartment offers contemporary comfort and convenience for urban dwellers.",
+      "price": "$2,000/month",
+      "status": "rent",
+      "area": "1000 sqft",
+      "location": "789 Oak Street, Urbanville, USA",
+      "facilities": ["living room", "gym", "swimming pool"],
+      "bedrooms": 2,
+      "bathrooms": 1
+  },
+  {
+      "id": 4,
+      "estate_title": "Student Housing Near Campus",
+      "image": "https://i.ibb.co/2N2GznR/deborah-cortelazzi-g-REqu-CUXQLI-unsplash.jpg",
+      "segment_name": "Student housing",
+      "description": "Conveniently located just steps away from campus, this student housing offers comfortable and practical living spaces for students. The furnished units feature shared common areas, including a spacious living room ideal for socializing or studying. Study rooms provide a quiet space for academic pursuits, while on-site laundry facilities ensure convenience for residents. With one bedroom and one bathroom, this housing option provides a conducive environment for focused learning and socializing.",
+      "price": "$800/month",
+      "status": "rent",
+      "area": "600 sqft",
+      "location": "101 College Avenue, University Town, USA",
+      "facilities": ["living room", "study room", "laundry room"],
+      "bedrooms": 1,
+      "bathrooms": 1
+  },
+  {
+      "id": 5,
+      "estate_title": "Senior Living Community with Amenities",
+      "image": "https://i.ibb.co/DpKQ1F6/pexels-vecislavas-popa-1643383.jpg",
+      "segment_name": "Senior living communities",
+      "description": "Embrace a vibrant retirement lifestyle in this active senior living community offering an abundance of amenities and activities. Residents enjoy maintenance-free living in a welcoming environment where social events and wellness programs are part of daily life. The community center serves as a hub for gatherings and activities, fostering a sense of belonging among residents. Stay active and healthy in the fitness center, or find tranquility in the beautifully landscaped gardens. With two bedrooms and two bathrooms, this community provides spacious and comfortable living for seniors looking to make the most of their retirement years.",
+      "price": "$3,500/month",
+      "status": "rent",
+      "area": "1200 sqft",
+      "location": "321 Maple Lane, Serenity Gardens, USA",
+      "facilities": ["community", "fitness", "gardens"],
+      "bedrooms": 2,
+      "bathrooms": 2
+  },
+  {
+      "id": 6,
+      "estate_title": "Seaside Vacation Rental Paradise",
+      "image": "https://i.ibb.co/0yk2bNS/pexels-jean-van-der-meulen-1457842.jpg",
+      "segment_name": "Vacation rentals",
+      "description": "Experience the ultimate seaside getaway in this luxurious vacation rental paradise. With its prime beachfront location, this property offers breathtaking ocean views from every angle. Spread across 2200 square feet, this rental features multiple bedrooms, providing ample space for family and friends. Relax and unwind in the private pool, or step directly onto the sandy beach for a day of sun and surf. With four bedrooms and three bathrooms, including a spacious master suite, this vacation rental is the perfect destination for a memorable beach retreat.",
+      "price": "$500/night",
+      "status": "rent",
+      "area": "2200 sqft",
+      "location": "Oceanfront Drive, Paradise Cove, USA",
+      "facilities": ["oceanfront", "pool", "beach"],
+      "bedrooms": 4,
+      "bathrooms": 3
+  }
+]
+
