@@ -10,7 +10,8 @@ export const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
  
   const [isOpen, setOpen] = useState(false);
-
+  // const {displayName, photoURL} = user
+console.log(user.photoURL, user)
   const navLinks = (
     <>
       <li>
@@ -61,31 +62,35 @@ export const Navbar = () => {
         >
           {navLinks}
         </ul>
-        <div className="my-anchor-element w-10 h-10 flex gap-5 items-center">
-          <img
-            src={
-              user
-                ? user.photoURL ||
-                  "https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                : ""
-            }
-            alt="profile image"
-            className="rounded-full"
-          />
-          <Tooltip anchorSelect=".my-anchor-element" place="left">
-            {user?.displayName || "undefined"}
-          </Tooltip>
+        <div >
+           
+          
           {user ? (
-            <button
+           <div className="flex gap-5 items-center">
+             <div className="my-anchor-element w-10 rounded-full">
+             <img
+               src={user?.photoURL}
+               alt="profile image"
+               className="rounded-full"
+             />
+             <Tooltip anchorSelect=".my-anchor-element" place="left">
+             {user?.displayName || "your Name"}
+          {/* {
+            user && 
+            <p></p>
+          } */}
+          </Tooltip>
+             </div>
+             <button
               onClick={() => logOut()}
               className="btn bg-gray-500 text-white"
             >
               Sign Out
-              {/* <NavLink to="/login" className={({isActive}) => isActive ? "font-bold underline" : ""}>Login</NavLink> */}
             </button>
+           </div>
           ) : (
             <button className="btn bg-gray-500 text-white">
-              <Link to="login">Login</Link>
+              <Link to="/login">Login</Link>
               {/* <NavLink to="/login" className={({isActive}) => isActive ? "font-bold underline" : ""}>Login</NavLink> */}
             </button>
           )}

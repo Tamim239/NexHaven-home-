@@ -7,11 +7,13 @@ import { PrivateProvider } from "./PrivateProvider";
 import { UpdateProfile } from "../Pages/Profile/UpdateProfile";
 import { FeaturedProperties } from "../Pages/FeaturedProperties/FeaturedProperties";
 import { FeaturedDetails } from "../Pages/FeaturedDetails";
+import { ErrorPage } from "../Shared/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
             path: "/",
@@ -31,7 +33,7 @@ export const router = createBrowserRouter([
         },
         {
           path: "/feature/:id",
-          element: <FeaturedDetails></FeaturedDetails>,
+          element: <PrivateProvider><FeaturedDetails></FeaturedDetails></PrivateProvider>,
           loader: ()=> fetch('/real.json')
         },
         {
