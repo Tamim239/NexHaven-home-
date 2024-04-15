@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -12,6 +12,7 @@ export const Register = () => {
   const [handleError, setHandleError] = useState("");
   const {createUser, updateUser, logOut} = useContext(AuthContext)
 
+const navigate = useNavigate()
 
   const {
     register,
@@ -38,11 +39,14 @@ export const Register = () => {
 
 createUser(email, password)
 .then(res =>{
-   logOut()
-    console.log("successfully", res)
-     updateUser(name, photoURL)
-     .then(()=>{
-       toast.success('successfully registered')
+  logOut()
+  console.log("successfully", res)
+  updateUser(name, photoURL)
+  .then(()=>{
+    toast.success('successfully registered')
+    setTimeout(() => {
+      navigate('/login')
+       }, 1000);
      })
 
 })
@@ -54,7 +58,7 @@ createUser(email, password)
   };
   AOS.init()
   return (
-    <div data-aos="fade-down-right" data-aos-duration="2000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+    <div data-aos="fade-down-left" data-aos-duration="2000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <h1 className="text-2xl font-bold text-center">
         Create New Account Here
       </h1>

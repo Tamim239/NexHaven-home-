@@ -51,10 +51,6 @@ export const Login = () => {
    .catch(() => toast.error("email and password combination is incorrect"))
   }
 
-
-
-
-
   return (
     <div data-aos="fade-down-right" data-aos-duration="1000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <h1 className="text-2xl font-bold text-center">Login Here</h1>

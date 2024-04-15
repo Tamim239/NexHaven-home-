@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaBath, FaBed, FaChartArea } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
+
 
 export const FeaturedDetails = () => {
   const [details, setDetails] = useState([]);
@@ -134,6 +135,11 @@ export const FeaturedDetails = () => {
             </div>
           </div>
           <p>{details?.description}</p>
+         <div className="text-right">
+         <Link to="/payment">
+             <button className="btn text-white text-base bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] border-0">Purchase</button>
+             </Link>
+         </div>
         </div>
       </a>
     </div>

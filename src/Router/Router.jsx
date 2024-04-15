@@ -12,6 +12,7 @@ import { Reviews } from "../Pages/Reviews/Reviews";
 import { UserProfile } from "../Pages/Profile/UserProfile";
 import { Contact } from "../Pages/Contact/Contact";
 import { About } from "../Pages/About/About";
+import PaymentInputs from "../Pages/Payment/PaymentOption";
 
 export const router = createBrowserRouter([
     {
@@ -59,7 +60,11 @@ export const router = createBrowserRouter([
         {
           path: "/contact",
           element: <Contact></Contact>
-        }
+        },
+        {
+          path: "/payment",
+          element: <PrivateProvider><PaymentInputs></PaymentInputs></PrivateProvider>
+        },
         
       ]
     },

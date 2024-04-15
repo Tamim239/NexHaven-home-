@@ -20,6 +20,9 @@ export const Navbar = () => {
           Home
         </NavLink>
       </li>
+      {
+        user && (
+
       <li>
         <NavLink
           to="/update-profile"
@@ -28,6 +31,8 @@ export const Navbar = () => {
           Update Profile
         </NavLink>
       </li>
+        )
+      }
       {user && (
         <li>
           <NavLink
@@ -68,6 +73,18 @@ export const Navbar = () => {
           Contact Us
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/payment"
+            className={({ isActive }) =>
+              isActive ? "font-bold underline" : ""
+            }
+          >
+            Payment
+          </NavLink>
+        </li>
+      )}
     </>
   );
 
@@ -114,30 +131,9 @@ export const Navbar = () => {
               </button>
             </div>
           ) : (
-            <Link to="/login" href="#_" className="relative inline-block text-lg group">
-                <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-gray-800 transition-colors duration-300 ease-out border-2 border-gray-900 rounded-lg group-hover:text-white">
-                  <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-                  <span className="absolute left-0 w-32 h-32 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-gray-900 group-hover:-rotate-180 ease"></span>
-                  <span className="relative">Login</span>
-                </span>
-                <span
-                  className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-gray-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-                  data-rounded="rounded-lg"
-                ></span>
-              </Link>
-            // <Link to="/login"
-            //   href="#_"
-            //   className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
-            // >
-            //   <span className="w-full h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute"></span>
-            //   <span className="relative px-6 py-3 transition-all ease-out bg-gray-900 rounded-md group-hover:bg-opacity-0 duration-400">
-            //     <span className="relative text-white">Button Text</span>
-            //   </span>
-            // </Link>
-            // <button className="btn bg-gray-500 text-white">
-            //   <Link to="/login">Login</Link>
-
-            // </button>
+             <Link to="/login">
+             <button className="btn text-white text-base bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05]">Login</button>
+             </Link>
           )}
         </div>
       </div>
