@@ -128,7 +128,7 @@ export const Navbar = () => {
               <div className="my-anchor-element">
                 <img
                   src={user.photoURL || ""}
-                  alt="profile image"
+                  alt="profile-image"
                   className="object-cover w-12 h-12 rounded-full shadow dark:bg-gray-500"
                 />
                 <Tooltip anchorSelect=".my-anchor-element" place="left">

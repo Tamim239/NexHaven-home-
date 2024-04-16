@@ -1,11 +1,12 @@
 import { FaBath, FaBed, FaChartArea } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+
 
 export const Feature = ({ feature }) => {
   const {
     id,
-    facilities,
     location,
     area,
     status,
@@ -77,3 +78,7 @@ export const Feature = ({ feature }) => {
     </div>
   );
 };
+
+Feature.propTypes ={
+  feature: PropTypes.object
+}
