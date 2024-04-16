@@ -1,17 +1,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 export const UserProfile = () => {
 const {user} = useContext(AuthContext)
 const {displayName, photoURL, email} = user
   return (
     <div>
-      {/* <h1 className="text-2xl font-bold text-center">Your Information</h1>
-        <div className="border-4 p-5">
-            <h1 className="border text-xl">Name : Tamim</h1>
-             <p className="border text-xl">Email : mama and mami @ gmail.com</p>
-             <img src="https://images.unsplash.com/photo-1505968409348-bd000797c92e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""  className="w-60"/>
-        </div> */}
+      <Helmet>
+        <title>User Profile</title>
+      </Helmet>
       <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img
           src={photoURL}

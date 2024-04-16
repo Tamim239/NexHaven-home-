@@ -13,6 +13,7 @@ import { UserProfile } from "../Pages/Profile/UserProfile";
 import { Contact } from "../Pages/Contact/Contact";
 import { About } from "../Pages/About/About";
 import PaymentInputs from "../Pages/Payment/PaymentOption";
+import { Gallery } from "../Pages/Gallery/Gallery";
 
 export const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ export const router = createBrowserRouter([
         {
           path: "/payment",
           element: <PrivateProvider><PaymentInputs></PaymentInputs></PrivateProvider>
+        },
+        {
+          path: "/gallery",
+          element: <PrivateProvider><Gallery></Gallery></PrivateProvider>
         },
         
       ]

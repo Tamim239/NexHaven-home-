@@ -6,6 +6,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from 'react-hot-toast';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import { Helmet } from "react-helmet-async";
 
 export const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -59,6 +60,9 @@ createUser(email, password)
   AOS.init()
   return (
     <div data-aos="fade-down-left" data-aos-duration="2000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+      <Helmet>
+        <title>Register</title>
+      </Helmet>
       <h1 className="text-2xl font-bold text-center">
         Create New Account Here
       </h1>

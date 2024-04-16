@@ -6,6 +6,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { FaGithub, FaGoogle } from "react-icons/fa";
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import { Helmet } from "react-helmet-async";
 
 export const Login = () => {
   AOS.init()
@@ -53,6 +54,9 @@ export const Login = () => {
 
   return (
     <div data-aos="fade-down-right" data-aos-duration="1000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+     <Helmet>
+        <title>Login</title>
+      </Helmet>
       <h1 className="text-2xl font-bold text-center">Login Here</h1>
       <form onSubmit={handleLogin} className="space-y-6">
         <div className="space-y-1 text-sm">

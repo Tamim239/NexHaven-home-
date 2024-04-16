@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 export const Reviews = () => {
   return (
     <div className="w-4/5 mx-auto">
+      <Helmet>
+        <title>Review</title>
+      </Helmet>
       <div className="text-center">
         <h1 className="text-3xl font-bold mb-5">
           <span className="">Happy Clients</span>

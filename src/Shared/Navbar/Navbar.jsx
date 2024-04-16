@@ -20,6 +20,18 @@ export const Navbar = () => {
           Home
         </NavLink>
       </li>
+      {user && (
+        <li>
+          <NavLink
+            to="/user-profile"
+            className={({ isActive }) =>
+              isActive ? "font-bold underline" : ""
+            }
+          >
+            User Profile
+          </NavLink>
+        </li>
+      )}
       {
         user && (
 
@@ -33,15 +45,27 @@ export const Navbar = () => {
       </li>
         )
       }
-      {user && (
+{user && (
         <li>
           <NavLink
-            to="/user-profile"
+            to="/gallery"
             className={({ isActive }) =>
               isActive ? "font-bold underline" : ""
             }
           >
-            User Profile
+            Gallery
+          </NavLink>
+        </li>
+      )}
+ {user && (
+        <li>
+          <NavLink
+            to="/payment"
+            className={({ isActive }) =>
+              isActive ? "font-bold underline" : ""
+            }
+          >
+            Payment
           </NavLink>
         </li>
       )}
@@ -73,18 +97,6 @@ export const Navbar = () => {
           Contact Us
         </NavLink>
       </li>
-      {user && (
-        <li>
-          <NavLink
-            to="/payment"
-            className={({ isActive }) =>
-              isActive ? "font-bold underline" : ""
-            }
-          >
-            Payment
-          </NavLink>
-        </li>
-      )}
     </>
   );
 
@@ -105,7 +117,7 @@ export const Navbar = () => {
         <ul
           className={`md:flex *:ml-4 text-lg items-center absolute md:static
             ${
-              isOpen ? "top-16 w-full z-50" : "hidden"
+              isOpen ? " top-16 w-full z-50" : "hidden"
             } max-sm:bg-slate-800 max-sm:text-white`}
         >
           {navLinks}

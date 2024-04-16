@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaBath, FaBed, FaChartArea } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
+import { Helmet } from "react-helmet-async";
 
 
 export const FeaturedDetails = () => {
@@ -23,6 +24,9 @@ export const FeaturedDetails = () => {
 
   return (
     <div  className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+      <Helmet>
+        <title>Feature Details : {id} </title>
+      </Helmet>
       <a
         rel="noopener noreferrer"
         href="#"
