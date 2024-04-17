@@ -4,15 +4,19 @@ export const Reviews = () => {
   return (
     <div className="w-4/5 mx-auto">
       <Helmet>
-        <title>Review</title>
+        <title>NexHaven || Review</title>
       </Helmet>
       <div className="text-center">
-        <h1 className="text-3xl font-bold mb-5">
+        <h1 data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine" className="text-3xl font-bold mb-5">
           <span className="">Happy Clients</span>
         </h1>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-        <div className="container  border-2 p-6 mx-auto divide-y rounded-md dark:divide-gray-300 dark:bg-gray-50 dark:text-gray-800">
+      <div data-aos="fade-right"
+     data-aos-offset="100"
+     data-aos-easing="ease-in-sine" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div className="container border-2 p-6 mx-auto divide-y rounded-md ">
           <div className="flex justify-between p-4">
             <div className="flex space-x-4">
               <div>
@@ -24,7 +28,7 @@ export const Reviews = () => {
               </div>
               <div>
                 <h4 className="font-bold">Leroy Jenkins</h4>
-                <span className="text-xs dark:text-gray-600">2 days ago</span>
+                <span className="text-xs dark:text-gray-600">10 days ago</span>
               </div>
             </div>
             <div className="flex items-center space-x-2 dark:text-yellow-700">

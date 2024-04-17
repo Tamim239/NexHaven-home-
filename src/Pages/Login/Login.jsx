@@ -49,13 +49,13 @@ export const Login = () => {
     console.log(res)
     navigate(location?.state ? location.state :'/')
    })
-   .catch(() => toast.error("email and password combination is incorrect"))
+   .catch(() => toast.error("Email and Password is incorrect"))
   }
 
   return (
     <div data-aos="fade-down-right" data-aos-duration="1000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
      <Helmet>
-        <title>Login</title>
+        <title>NexHaven || Login</title>
       </Helmet>
       <h1 className="text-2xl font-bold text-center">Login Here</h1>
       <form onSubmit={handleLogin} className="space-y-6">

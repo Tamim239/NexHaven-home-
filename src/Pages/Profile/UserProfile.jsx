@@ -8,15 +8,19 @@ const {displayName, photoURL, email} = user
   return (
     <div>
       <Helmet>
-        <title>User Profile</title>
+        <title>NexHaven || User Profile</title>
       </Helmet>
       <div className="flex flex-col justify-center  p-6 shadow-md rounded-xl sm:px-12 dark:bg-gray-50 dark:text-gray-800">
         <img
+        data-aos="fade-down"
+        data-aos-easing="linear"
+        data-aos-duration="1500"
           src={photoURL}
           alt=""
           className="w-48 h-48 mx-auto rounded-full dark:bg-gray-500 aspect-square"
         />
-        <div className="space-y-4 text-center divide-y dark:divide-gray-300">
+        <div data-aos="fade-up"
+     data-aos-duration="3000" className="space-y-4 text-center divide-y dark:divide-gray-300">
           <div className="my-2 space-y-1">
             <h2 className="text-xl font-semibold sm:text-2xl">{displayName}</h2>
             <p className="px-5 text-xs sm:text-base dark:text-gray-600">

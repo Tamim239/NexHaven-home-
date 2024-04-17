@@ -4,7 +4,6 @@ import { FaBath, FaBed, FaChartArea } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { Helmet } from "react-helmet-async";
 
-
 export const FeaturedDetails = () => {
   const [details, setDetails] = useState([]);
 
@@ -23,9 +22,11 @@ export const FeaturedDetails = () => {
   console.log(details);
 
   return (
-    <div  className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+    <div data-aos="flip-left"
+    data-aos-easing="ease-out-cubic"
+    data-aos-duration="2000" className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
       <Helmet>
-        <title>Feature Details : {id} </title>
+        <title>NexHaven || Details: {id}</title>
       </Helmet>
       <a
         rel="noopener noreferrer"
@@ -99,7 +100,7 @@ export const FeaturedDetails = () => {
                 <p className="leading-snug flex gap-2 items-center justify-around">
                   {facilities?.map((facility, index) => (
                     <div
-                    key={index}
+                      key={index}
                       className=" py-2 px-2 rounded-xl bg-[#343131] text-white"
                     >
                       <p>{facility}</p>
@@ -129,7 +130,7 @@ export const FeaturedDetails = () => {
                 </p>
                 <div className="space-y-3">
                   <p className="flex items-center gap-2">
-                    <CiLocationOn className="text-xl"/> {details?.location}
+                    <CiLocationOn className="text-xl" /> {details?.location}
                   </p>
                   <p className=" py-2 px-1 rounded-xl bg-[#343131] text-white text-center">
                     {details?.segment_name}
@@ -139,11 +140,13 @@ export const FeaturedDetails = () => {
             </div>
           </div>
           <p>{details?.description}</p>
-         <div className="text-right">
-         <Link to="/payment">
-             <button className="btn text-white text-base bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] border-0">Purchase</button>
-             </Link>
-         </div>
+          <div className="text-right">
+            <Link to="/payment">
+              <button className="btn text-white text-base bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] border-0">
+                Purchase
+              </button>
+            </Link>
+          </div>
         </div>
       </a>
     </div>

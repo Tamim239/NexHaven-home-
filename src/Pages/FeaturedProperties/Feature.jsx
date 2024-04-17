@@ -1,8 +1,7 @@
 import { FaBath, FaBed, FaChartArea } from "react-icons/fa6";
 import { CiLocationOn } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import PropTypes from 'prop-types';
-
+import PropTypes from "prop-types";
 
 export const Feature = ({ feature }) => {
   const {
@@ -19,8 +18,8 @@ export const Feature = ({ feature }) => {
   } = feature;
 
   return (
-    <div className=" p-2 shadow-md dark:bg-gray-50 dark:text-gray-800">
-      <div className="space-y-2">
+    <div className=" p-2 shadow-md ">
+      <div className="space-y-2 md:h-[494px]">
         <div className="space-y-2 relative">
           <img
             src={image}
@@ -34,17 +33,16 @@ export const Feature = ({ feature }) => {
           </div>
         </div>
         <div className="flex items-center justify-between">
-        <p className=" py-2 px-2 rounded-xl text-center  text-2xl font-semibold">
-          {segment_name}
-        </p>
-        <div className="flex items-center text-xs ">
+          <p className=" py-2 px-2 rounded-xl text-center  text-2xl font-semibold">
+            {segment_name}
+          </p>
+          <div className="flex items-center text-xs ">
             <span className="text-base bg-[#ffd519] p-2 rounded-xl font-bold">
               {price}
             </span>
           </div>
         </div>
         <div className="*:flex *:items-center *:gap-2 *:text-xl flex items-center justify-between px-3">
-
           <div>
             <FaBed className="text-[#f85830]" />
             <p>{bedrooms} Bed</p>
@@ -70,7 +68,7 @@ export const Feature = ({ feature }) => {
       </div>
       <div className="text-right mt-2">
         <Link to={`/feature/${id}`}>
-          <button className="btn bg-gradient-to-r from-[#f79b11] to-[#454242] text-white flex-grow">
+          <button className="btn bg-gradient-to-r from-[#f79b11] to-[#454242] text-white">
             View Property
           </button>
         </Link>
@@ -79,6 +77,6 @@ export const Feature = ({ feature }) => {
   );
 };
 
-Feature.propTypes ={
-  feature: PropTypes.object
-}
+Feature.propTypes = {
+  feature: PropTypes.object,
+};

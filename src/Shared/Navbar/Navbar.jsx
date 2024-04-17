@@ -6,10 +6,14 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 
-export const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
 
+export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const { user, logOut, loading } = useContext(AuthContext);
+  if(loading){
+    return;
+  }
+
   const navLinks = (
     <>
       <li>
@@ -57,7 +61,7 @@ export const Navbar = () => {
           </NavLink>
         </li>
     
-        <li>
+        {/* <li>
           <NavLink
             to="/payment"
             className={({ isActive }) =>
@@ -66,7 +70,7 @@ export const Navbar = () => {
           >
             Payment
           </NavLink>
-        </li>
+        </li> */}
       
 
         <li>
@@ -114,7 +118,7 @@ export const Navbar = () => {
           </div>
         </div>
         <ul
-          className={`lg:flex *:ml-2 text-lg items-center absolute lg:static
+          className={`lg:flex *:ml-3 text-lg items-center absolute lg:static
             ${
               isOpen ? " top-16 w-full z-50" : "hidden"
             } max-lg:bg-slate-800 max-lg:text-white`}

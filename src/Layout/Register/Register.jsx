@@ -62,7 +62,7 @@ createUser(email, password)
   return (
     <div data-aos="fade-down-left" data-aos-duration="2000" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <Helmet>
-        <title>Register</title>
+        <title>NexHaven || Register</title>
       </Helmet>
       <h1 className="text-2xl font-bold text-center">
         Create New Account Here

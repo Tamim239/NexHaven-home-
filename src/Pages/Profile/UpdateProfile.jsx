@@ -23,9 +23,11 @@ export const UpdateProfile = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
+    <div data-aos="fade-left"
+    data-aos-offset="500"
+    data-aos-duration="500" className="w-full max-w-md mx-auto p-8 space-y-2 my-6 rounded-xl text-white bg-[#111827]">
       <Helmet>
-        <title>Update Profile</title>
+        <title>NexHaven || Update Profile</title>
       </Helmet>
       <h1 className="text-2xl font-bold text-center">Update Profile Here</h1>
       <form onSubmit={handleUpdateProfile} className="space-y-6">

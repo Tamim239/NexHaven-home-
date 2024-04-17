@@ -4,7 +4,6 @@ import { Banner } from "./Banner"
 import { AuthContext } from "../../Provider/AuthProvider"
 import { InfinitySpin } from "react-loader-spinner"
 import { Helmet } from "react-helmet-async"
-import { NewsLetter } from "../Gallery/NewsLetter"
 
 export const Home = () => {
 const {loading} = useContext(AuthContext)
@@ -19,7 +18,7 @@ if(loading){
   return (
     <div className="md:w-4/5 mx-auto">
       <Helmet>
-        <title>Home</title>
+        <title>NexHaven || Home</title>
       </Helmet>
       <Banner></Banner>
       <FeaturedProperties></FeaturedProperties>

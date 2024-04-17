@@ -8,7 +8,7 @@ export const Gallery = () => {
   return (
     <div className="w-4/5 mx-auto">
         <Helmet>
-            <title>Gallery</title>
+            <title>NexHaven || Gallery</title>
         </Helmet>
         <City></City>
         <TownHouse></TownHouse>

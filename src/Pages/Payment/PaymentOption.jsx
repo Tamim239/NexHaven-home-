@@ -8,7 +8,7 @@ export default function PaymentInputs() {
   return (
     <div className="lg:w-1/3 md:mx-auto border-2 p-5 shadow-2xl">
       <Helmet>
-        <title>payment</title>
+        <title>NexHaven || payment</title>
       </Helmet>
       <h1 className="text-center text-4xl mb-2">Provide Details</h1>
       <div className="flex flex-col *:py-2 *:px-2 *:mb-2">

@@ -1,5 +1,5 @@
 * Website name : NexHaven
-* live site URL : 
+* live site URL : https://nexhaven.netlify.app/
 
 * When you enter my website, you will first see the navbar and below there is a banner that will automatically slide after 3 seconds and below there is a bullet point if you click on that specific slide image will show and animation will happen.  
 
@@ -17,6 +17,8 @@ npm Package
 * PropTypes
 * Hot Toast
 * React-icons
+* React-Helmet
+* React-Spinner
 
 implement of 3 package
 * React Hook Form
