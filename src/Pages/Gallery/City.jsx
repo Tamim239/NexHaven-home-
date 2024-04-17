@@ -7,7 +7,7 @@ import image6 from "../../assets/image6.jpg";
 
 export const City = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 bg-[#FBECED] rounded-3xl">
+    <div className="grid grid-cols-1 *:mx-auto md:grid-cols-2 lg:grid-cols-3 bg-[#FBECED] rounded-3xl">
 
       <div className="flex flex-col justify-center max-w-xs p-6 sm:px-12 ">
         <img

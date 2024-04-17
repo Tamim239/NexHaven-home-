@@ -27,17 +27,13 @@ export const FeaturedProperties = () => {
       <div
         data-aos="fade-down"
         data-aos-easing="linear"
-        data-aos-duration="1500"
-        data-aos-anchor="#feature_skill"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
         className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-10"
       >
         {featured.map((feature) => (
           <Feature key={feature.id} feature={feature}></Feature>
         ))}
-        <div
-          id="feature_skill"
-          className="absolute size-5  right-0 top-1/3"
-        ></div>
       </div>
     </div>
   );

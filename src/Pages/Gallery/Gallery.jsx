@@ -6,7 +6,7 @@ import { NewsLetter } from "./NewsLetter"
 
 export const Gallery = () => {
   return (
-    <div className="w-4/5 mx-auto">
+    <div className="md:w-4/5 mx-auto">
         <Helmet>
             <title>NexHaven || Gallery</title>
         </Helmet>
