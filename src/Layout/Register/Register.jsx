@@ -22,7 +22,8 @@ const navigate = useNavigate()
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, e) => {
+    e.preventDefault()
     const { name, email, password, photoURL } = data;
     console.log(name, email, password, photoURL);
     setHandleError('')

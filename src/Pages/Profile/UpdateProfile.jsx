@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Helmet } from "react-helmet-async";
 
 export const UpdateProfile = () => {
-  const { updateUser, user } = useContext(AuthContext);
+  const { updateUser, user, setUser } = useContext(AuthContext);
   const { displayName, photoURL, email } = user;
 
   const handleUpdateProfile = (e) => {
@@ -16,7 +16,8 @@ export const UpdateProfile = () => {
     console.log(name, photo, email);
     updateUser(name, photo)
       .then(() => {
-        window.location.reload()
+        setUser({displayName: name, photoURL: photo})
+        toast.success("successfully updated")
       })
       .catch((err) => console.log(err.message));
   };

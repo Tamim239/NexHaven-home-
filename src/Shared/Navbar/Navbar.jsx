@@ -45,7 +45,7 @@ export const Navbar = () => {
       </li>
         )
       }
-{user && (
+
         <li>
           <NavLink
             to="/gallery"
@@ -56,8 +56,7 @@ export const Navbar = () => {
             Gallery
           </NavLink>
         </li>
-      )}
- {user && (
+    
         <li>
           <NavLink
             to="/payment"
@@ -68,8 +67,8 @@ export const Navbar = () => {
             Payment
           </NavLink>
         </li>
-      )}
-      {user && (
+      
+
         <li>
           <NavLink
             to="/reviews"
@@ -80,7 +79,7 @@ export const Navbar = () => {
             Reviews
           </NavLink>
         </li>
-      )}
+      
       <li>
         <NavLink
           to="/about"
@@ -110,15 +109,15 @@ export const Navbar = () => {
               Haven
             </span>
           </h1>
-          <div className="md:hidden text-3xl" onClick={() => setOpen(!isOpen)}>
+          <div className="lg:hidden text-3xl" onClick={() => setOpen(!isOpen)}>
             {isOpen === true ? <IoMdClose /> : <FiMenu />}
           </div>
         </div>
         <ul
-          className={`md:flex *:ml-4 text-lg items-center absolute md:static
+          className={`lg:flex *:ml-2 text-lg items-center absolute lg:static
             ${
               isOpen ? " top-16 w-full z-50" : "hidden"
-            } max-sm:bg-slate-800 max-sm:text-white`}
+            } max-lg:bg-slate-800 max-lg:text-white`}
         >
           {navLinks}
         </ul>
