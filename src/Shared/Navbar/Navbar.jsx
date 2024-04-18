@@ -120,7 +120,7 @@ export const Navbar = () => {
         <ul
           className={`lg:flex *:ml-3 text-lg items-center absolute lg:static
             ${
-              isOpen ? " top-16 w-full z-50" : "hidden"
+              isOpen ? " top-16 w-full md:w-4/5 md:mx-auto z-50" : "hidden"
             } max-lg:bg-slate-800 max-lg:text-white`}
         >
           {navLinks}
